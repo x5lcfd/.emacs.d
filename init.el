@@ -1,26 +1,16 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/elisp"))
 (require 'p9-packages)
+(require 'p9-ui)
 
 ;; setup auto-save
 (setq backup-directory-alist `((".*" . "~/.saves")))
 (setq auto-save-file-name-transforms `((".*" "~/.saves" t)))
-
-(require 'elpacn-source)
-(require 'p9-ui)
-
-;; default font
-;; (set-face-attribute 'default nil
-;; 		    :family "Source Code Pro"
-;; 		    :height 110
-;; 		    :weight 'normal
-;; 		    :width 'normal)
 
 (require 'use-package)
 
 (use-package acme-theme
   :config
   (load-theme 'acme t))
-
 
 (use-package dired-sidebar
   :bind (("C-x C-n" . dired-sidebar-toggle-sidebar))
