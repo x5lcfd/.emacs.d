@@ -1,7 +1,6 @@
-
 (if window-system
     (tool-bar-mode -1)
-  (setq-default frame-title-format '("%b")))
+  )
 
 ;; 调整中文字体
 ;; https://gist.github.com/Superbil/7113937
@@ -74,5 +73,7 @@
                                     (30 . 36) (34 . 40) (36 . 44)))
   ;; Setup font size based on emacs-font-size-pair
   (set-font emacs-english-font emacs-cjk-font emacs-font-size-pair))
+
+(setq frame-title-format '("%b"))
 
 (provide 'p9-ui)
