@@ -1,6 +1,8 @@
 (if window-system
-    (tool-bar-mode -1)
-  )
+    (progn
+      (menu-bar-mode -1)
+      (tool-bar-mode -1)
+      ))
 
 ;; 调整中文字体
 ;; https://gist.github.com/Superbil/7113937
@@ -63,9 +65,9 @@
   (global-set-key (kbd "C-M--") 'decrease-emacs-font-size)
 
   ;; setup default english font and cjk font
-  (setq emacs-english-font "Source Code Pro")
+  (setq emacs-english-font "mononoki")
   (setq emacs-cjk-font "LXGW WenKai")
-  (setq emacs-font-size-pair '(15 . 18))
+  (setq emacs-font-size-pair '(21 . 24))
   (setq emacs-font-size-pair-list '(( 5 .  6) (10 . 12)
                                     (13 . 16) (15 . 18) (17 . 20)
                                     (19 . 22) (20 . 24) (21 . 26)
